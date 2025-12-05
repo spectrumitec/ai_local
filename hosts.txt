@@ -1,0 +1,5 @@
+# Add to hosts file
+127.0.0.1   n8n.local		    # Workflow application
+127.0.0.1   radmin.local	    # REDIS chat memory database (admin)
+127.0.0.1   attu.local		    # Milvus Admin
+127.0.0.1   minio.local		    # MinIO S3 bucket admin
