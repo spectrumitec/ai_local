@@ -1,5 +1,9 @@
 # AI Local System
 
+This is not intended for production use. It is focused toward use for proof of concept (POC), testing and a starting point for learning AI and tools. This project lends fairly well to portable installations on laptop or desktop PC. At minimum can be installed on a Windows PC with Docker Desktop and paired up with LM Studio. This will deploy a set of commonly applications and databases. Some application containers software may need to be configured post deployment like n8n, database management, etc.
+
+## Overview
+
 Docker compose for deploying an AI application set for a local system. The following container deployment will deploy from compose.
 
 - HAproxy (localhost port 80 / 443)
@@ -13,6 +17,7 @@ Docker compose for deploying an AI application set for a local system. The follo
 
 - Docker Desktop (windows / Mac)
 - Docker (Linux / Mac)
+- Git tools if not installed
 
 <u>AI Model Loaders</u>
 
@@ -21,15 +26,30 @@ AI Containers are not included by default due to varying configurations. Ollama 
 - LM Studio (AI models) - more models availalbe
 - Ollama (Linux or Mac where LM Studio is not available)
 
-## Configuration
+## Install and Setup
 
-From a command line, create a folder to launch docker containers, change to working folder, and clone this repository.
+After installing Docker Desktop or Docker, create a new folder for housng the application set. From a command line, change to the folder that was created and run the git command below.
 
 <pre>
 git clone https://github.com/spectrumitec/ai_local.git .
 </pre>
 
-The compose file configures a 'dockernet' network with subnet of 172.18.0.0/24. Each container has an assigned IP address. HAproxy port 80 and 443 are exposed and the configuration uses ACL to resolve URL (below hosts entry) to web services running on the containers. MariaDB port is exposed for use with MySQL or MAriaDB clients.
+The following folder structure pulled from the repository
+
+<pre>
+  new_folder
+    ├ _configs              Holds confiuration files, SSL certificates, and some container scripts
+    ├ _images               Image folder for README.md file
+    ├ application           Folder where container mounts are created other than HAproxy
+    ├ haproxy               HAproxy specific files
+    ├ .env                  Default variables for compose file
+    ├ .gitignore            Ignore file for excluding folders when pushed to a git repo
+    ├ docker-compose.yml    Docker compose file (application startup)
+    ├ hosts.txt             Required to add to your laptop or desktop hosts file (URL resolution to local names)
+    └ README.md             This file
+</pre>
+
+The compose file configures a 'dockernet' network with subnet of 172.18.0.0/24. Each container has an assigned IP address. HAproxy port 80 and 443 are exposed and the configuration uses ACL to resolve URL (below hosts entry) to web services running on the containers. MariaDB and Postgres ports are exposed for use external Database management tools.
 
 The following should be added to your system hosts file for URL mapping in HAproxy:
 
