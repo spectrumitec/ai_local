@@ -13,10 +13,13 @@ Docker compose for deploying an AI application set for a local system. The follo
 
 - Docker Desktop (windows / Mac)
 - Docker (Linux / Mac)
+
+<u>AI Model Loaders</u>
+
+AI Containers are not included by default due to varying configurations. Ollama or vLLM can be added to the compose file after download. LM Studio can be installed and can leverage the web services built into the client. AI containers or application may be installed on other systems from this deployment.
+
 - LM Studio (AI models) - more models availalbe
 - Ollama (Linux or Mac where LM Studio is not available)
-
-Optional use of Ollama however there is less support for Milvus embedding models (at current time)
 
 ## Configuration
 
