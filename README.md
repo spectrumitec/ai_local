@@ -29,11 +29,6 @@ From a command line, create a folder to launch docker containers, change to work
 git clone https://github.com/spectrumitec/ai_local.git .
 </pre>
 
-The '\_configs' folder contains the following:
-
-- SSL certificate used for HAproxy and some containers (can be replaced with trusted certs)
-- Container hosts file mapped to each container.
-
 The compose file configures a 'dockernet' network with subnet of 172.18.0.0/24. Each container has an assigned IP address. HAproxy port 80 and 443 are exposed and the configuration uses ACL to resolve URL (below hosts entry) to web services running on the containers. MariaDB port is exposed for use with MySQL or MAriaDB clients.
 
 The following should be added to your system hosts file for URL mapping in HAproxy:
