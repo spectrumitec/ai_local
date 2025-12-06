@@ -4,8 +4,9 @@ Docker compose for deploying an AI application set for a local system. The follo
 
 - HAproxy (localhost port 80 / 443)
 - n8n Workflow
-- Postgres SQL
 - REDIS memory DB
+- Postgres SQL
+- MariaDB SQL
 - Milvus vector store
 
 <u>Required</u>
