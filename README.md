@@ -11,9 +11,10 @@ Docker compose for deploying an AI application set for a local system. The follo
 
 <u>Required</u>
 
-- LM Studio (AL models)
-- Docker Desktop (Deployment of this configuration)
-- HeidiSQL (Windows DB client)
+- Docker Desktop (windows / Mac)
+- Docker (Linux / Mac)
+- LM Studio (AI models) - more models availalbe
+- Ollama (Linux or Mac where LM Studio is not available)
 
 Optional use of Ollama however there is less support for Milvus embedding models (at current time)
 
