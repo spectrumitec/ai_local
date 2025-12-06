@@ -42,7 +42,7 @@ The following folder structure pulled from the repository
     ├ _images               Image folder for README.md file
     ├ application           Folder where container mounts are created other than HAproxy
     ├ haproxy               HAproxy specific files
-    ├ .env                  Default variables for compose file
+    ├ .env                  Default variables for compose file (default user and passwords)
     ├ .gitignore            Ignore file for excluding folders when pushed to a git repo
     ├ docker-compose.yml    Docker compose file (application startup)
     ├ hosts.txt             Required to add to your laptop or desktop hosts file (URL resolution to local names)
