@@ -40,8 +40,10 @@ If you need some help to install and configure, you can use the '\_HowTos' folde
 
 LM Studio or Ollama (or cloud AI services) are not yet needed at this stage of setup. It wll only be needed once using some of the applications in this repository, like 'n8n', which has AI agent nodes and functions that need to leverage AI software.
 
+<table>
+<tr><td>
 1. After installing Docker Desktop or Docker, create a new folder on your local system drive for housng these repository files.
-
+</td></tr><tr><td>
 2. There are two way to pull down the Git repository. Either use a 'git' tool to clone the repository to a folder or download the zip file and extract it to a folder.
 
 Github code menu:
@@ -67,6 +69,8 @@ The following folder structure is pulled from the repository or extracted from t
     └ hosts                 Required to add to your laptop or desktop hosts file (URL resolution to local names)
 </pre>
 
+</td></tr><tr><td>
+
 3. Before deploying, you may want to change the default root or admin credentials in the '.env' file. These are applied to database server, database admin panels and Milvus S3 bucket, etc. Some admin panels are not configured with login credentials like Milvus and Redis.
 
 Defaults are:
@@ -81,6 +85,8 @@ Usernames will apply as the following:
 - root
 - root@local (pgadmin only)
 
+</td></tr><tr><td>
+
 4. Run the docker compose from the command line to deploy the applications.
 
 Open a terminal, navigate to the folder where the repository is located and run the following command.
@@ -89,7 +95,9 @@ Open a terminal, navigate to the folder where the repository is located and run 
 docker compose -f ./docker-compose.yaml up -d
 </pre>
 
-4. When the application containers are deployed, a docker network will be configured with internal network of 172.18.0.0/24. Each container will have it's own IP address in this docker network. Some of the containers have web services and connections to them will be handled via and HAproxy container using ACL rules. By default the ACLs are configured to only local naming (below). The HAproxy configuration can be modified as you need to resolve other naming if choosing to use DNS resolution. For basic setup, we will use localhost and hosts naming which doesn't depend on DNS services.
+</td></tr><tr><td>
+
+5. When the application containers are deployed, a docker network will be configured with internal network of 172.18.0.0/24. Each container will have it's own IP address in this docker network. Some of the containers have web services and connections to them will be handled via and HAproxy container using ACL rules. By default the ACLs are configured to only local naming (below). The HAproxy configuration can be modified as you need to resolve other naming if choosing to use DNS resolution. For basic setup, we will use localhost and hosts naming which doesn't depend on DNS services.
 
 Your local system will need the following default hosts entries added to the hosts file.
 
@@ -108,6 +116,9 @@ Hosts file additions (local naming):
 127.0.0.1   minio.local		      # MinIO S3 bucket admin
 127.0.0.1   n8n.local		        # Workflow application
 </pre>
+
+</td></tr>
+</table>
 
 ## Additional Information
 
