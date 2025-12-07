@@ -69,7 +69,7 @@ The following folder structure is pulled from the repository or extracted from t
     ├ .gitignore            Ignore file for excluding folders when pushed to a git repo
     ├ README.md             This file
     ├ docker-compose.yml    Docker compose file (application startup)
-    └ hosts                 Required to add to your laptop or desktop hosts file (URL resolution to local names)
+    └ hosts                 Hosts entries for local PC or Laptop
 </pre>
 
 </td></tr><tr><td>
