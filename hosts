@@ -1,8 +1,9 @@
-# Add to hosts file
-127.0.0.1   insight.local       # REDIS chat memory database (admin)
-127.0.0.1   adminer.local       # Common Web Admin for MySQL, MariaDB, Postgres, etc
-127.0.0.1   pgadmin.local       # PGAdmin local
-127.0.0.1   phpmyadmin.local    # PHPMyAdmin
-127.0.0.1   attu.local		    # Milvus Admin
-127.0.0.1   minio.local		    # MinIO S3 bucket admin
-127.0.0.1   n8n.local		    # Workflow application
+# Add to you dekstop or laptop hosts file
+
+127.0.0.1 insight.local # REDIS chat memory database (admin)
+127.0.0.1 adminer.local # Common Web Admin for MySQL, MariaDB, Postgres, etc
+127.0.0.1 pgadmin.local # PGAdmin local
+127.0.0.1 phpmyadmin.local # PHPMyAdmin
+127.0.0.1 attu.local # Milvus Admin
+127.0.0.1 minio.local # MinIO S3 bucket admin
+127.0.0.1 n8n.local # Workflow application
