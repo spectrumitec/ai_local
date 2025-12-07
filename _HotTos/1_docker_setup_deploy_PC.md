@@ -1,6 +1,10 @@
-# Docker Setup and Initial Deployment
+# Docker Setup and Initial Deployment (PC)
 
-Download and install Docker
+NOTE: See README.md on main page for initial setup. These steps are repeated except have some images for reference.
+
+## Docker Setup and Deploy on PC
+
+Download and install Docker (https://www.docker.com/get-started/)
 
 <img src="_images/docker_1_setup.png" alt="" />
 
