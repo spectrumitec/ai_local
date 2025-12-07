@@ -30,16 +30,26 @@ Please note the following docker network hosts resolution. This file is located 
 172.18.0.42	    milvus
 </pre>
 
-The following is an example of Redis configuration
+Select the 'Credentials' from left menu
 
 <img src="_images/n8n_4_create_creds.png" alt="" />
+
+Type the new credentials you would like to add. In this example 'Redis'
 
 <img src="_images/n8n_5_cred_type.png" alt="" />
 
 <img src="_images/n8n_6_redis.png" alt="" />
 
+Enter the settings for Redis. This example is setting up Database 10 for Chat Memory. There is no user password set since this is a local instance running inside of a docker network.
+
 <img src="_images/n8n_7_redis_settings.png" alt="" />
+
+As long as the service is running, you should see a successful connection message.
 
 <img src="_images/n8n_8_redis_success.png" alt="" />
 
+Finally seeing the newly added credential for Redis.
+
 <img src="_images/n8n_9_creds_list.png" alt="" />
+
+Add additional DB numbers for various use cases.
