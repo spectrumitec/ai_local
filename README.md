@@ -1,32 +1,35 @@
 # AI Local System
 
-This is not intended for production use. It is focused toward use for proof of concept (POC), testing and a starting point for learning AI and tools. This project lends fairly well to portable installations on laptop or desktop PC. At minimum can be installed on a Windows PC with Docker Desktop and paired up with LM Studio. This will deploy a set of commonly used applications and databases. Some application containers software may need to be configured post deployment like n8n, database management, etc.
+This project is focused toward a use for proof of concept (POC), testing and a starting point for learning AI and tools with AI model software. This project lends fairly well to portable installations on laptop or desktop PC. This is not meant for production workloads.
 
-## Overview
+## What You Need To Start
 
-Docker compose for deploying an AI application set for a local system. The following container deployment will deploy from compose.
+Assuming you are using a local PC or laptop that already has a GPU card installed (NVIDIA or AMD), these are a few tool installs needed to begin.
 
-- HAproxy (localhost port 80 / 443)
-- n8n Workflow
-- REDIS memory DB
-- Postgres SQL
-- MariaDB SQL
-- Milvus vector store
+AI software for models:
 
-<u>Required</u>
+- LM Studio for AI models: https://lmstudio.ai/download
+- Ollama for AI models: https://www.ollama.com/download
 
-- Docker Desktop (windows / Mac)
-- Docker (Linux / Mac)
-- Git tools if not installed
+<b>NOTE</b>: It is also possible to have LM Studio or Ollama installed on different systems as long as you can reach them over the network. This might work well if you have access to one or more systems with GPUs installed that you may want to take advantage of or test different AI model software.
 
-<u>AI Model Loaders</u>
+Docker Components for container deployment:
 
-AI Containers are not included by default due to varying configurations. Ollama or vLLM can be added to the compose file after download. LM Studio can be installed and can leverage the web services built into the client. AI containers or application may be installed on other systems from this deployment.
+- Docker Desktop: https://www.docker.com/get-started/
 
-- LM Studio (AI models) - more models availalbe
-- Ollama (Linux or Mac where LM Studio is not available)
+Optional Git tools.
 
-## Install and Setup
+- Git:
+  - Windows: https://git-scm.com/install/windows
+  - Mac: https://git-scm.com/install/mac
+  - Linux: https://git-scm.com/install/linux
+- Git for Windows: https://gitforwindows.org/
+
+## Help With Installation
+
+If you need some help to install and configure, you can use the '\_HowTos' folder above with helpers on how to install and configure.
+
+## Basic Install and Setup
 
 After installing Docker Desktop or Docker, create a new folder for housng the application set. From a command line, change to the folder that was created and run the git command below.
 
