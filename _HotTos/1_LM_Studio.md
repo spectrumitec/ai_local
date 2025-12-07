@@ -24,11 +24,15 @@ When opening the application you may start at the 'Developer' tab. Starting from
 
 <img src="_images/lm_studio_06_app.png" />
 
-The 'Developer' tab allows you to setup a web listener for LM Studio which acts similar to OpenAI APIs. Turning on 'Server on Local Network' will allow other systems on the network to access the LM Studio API.
+The 'Developer' tab allows you to setup a web listener for LM Studio which acts similar to OpenAI APIs. Turning on 'Server on Local Network' will allow other systems on the network to access the LM Studio API. The application needs to be running to be able to access via network.
 
 <img src="_images/lm_studio_07_web_server.png" />
 
+Configuring the web services
+
 <img src="_images/lm_studio_08_web_server.png" />
+
+Turning on the web service, what IP it is bound to, and what are the API URLs
 
 <img src="_images/lm_studio_09_web_server.png" />
 

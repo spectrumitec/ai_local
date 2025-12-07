@@ -25,13 +25,13 @@ Optional Git tools.
   - Linux: https://git-scm.com/install/linux
 - Git for Windows: https://gitforwindows.org/
 
-## Help With Installation
+## Help With Initial Tools Installation
 
 If you need some help to install and configure, you can use the '\_HowTos' folder above with helpers on how to install and configure.
 
 <a href="https://github.com/spectrumitec/ai_local/blob/main/_HotTos/1_LM_Studio.md" target="_blank">LM Studio Install and Configure</a>
 
-## Basic Install and Setup
+## Basic Install and Setup of this Repository
 
 After installing Docker Desktop or Docker, create a new folder for housng the application set. From a command line, change to the folder that was created and run the git command below.
 
