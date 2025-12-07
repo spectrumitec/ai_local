@@ -1,4 +1,4 @@
-# LM Studio
+# LM Studio (PC)
 
 This instructions are for Windows where Linux and Mac may differ.
 
