@@ -37,7 +37,7 @@ If you need some help to install and configure, you can use the '\_HowTos' folde
 
 LM Studio or Ollama (or cloud AI services) are not yet needed at this stage of setup. It wll only be needed once using some of the applications in this repository, like 'n8n', which has AI agent nodes and functions that need to leverage AI software.
 
-### After installing Docker Desktop or Docker create a new folder for housng this repository files
+1. After installing Docker Desktop or Docker create a new folder for housng this repository files
 
 2. There are two way to pull down the Git repository. Either use a 'git' tool to clone the repository to a folder or download the zip file and extract it to a folder. Start by creating a folder you want to use for this project.
 
