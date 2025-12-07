@@ -29,7 +29,7 @@ Optional Git tools.
 
 If you need some help to install and configure, you can use the '\_HowTos' folder above with helpers on how to install and configure.
 
-<a href="https://github.com/spectrumitec/ai_local/blob/main/_HotTos/1_LM_Studio.md" target="_blank">LM Studio Install and Configure</a
+<a href="https://github.com/spectrumitec/ai_local/blob/main/_HotTos/1_LM_Studio.md" target="_blank">LM Studio Install and Configure</a>
 
 ## Basic Install and Setup
 
