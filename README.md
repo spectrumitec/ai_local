@@ -1,6 +1,6 @@
 # AI Local System
 
-This is not intended for production use. It is focused toward use for proof of concept (POC), testing and a starting point for learning AI and tools. This project lends fairly well to portable installations on laptop or desktop PC. At minimum can be installed on a Windows PC with Docker Desktop and paired up with LM Studio. This will deploy a set of commonly applications and databases. Some application containers software may need to be configured post deployment like n8n, database management, etc.
+This is not intended for production use. It is focused toward use for proof of concept (POC), testing and a starting point for learning AI and tools. This project lends fairly well to portable installations on laptop or desktop PC. At minimum can be installed on a Windows PC with Docker Desktop and paired up with LM Studio. This will deploy a set of commonly used applications and databases. Some application containers software may need to be configured post deployment like n8n, database management, etc.
 
 ## Overview
 
@@ -76,6 +76,6 @@ From docker desktop, you should see the running containers start up. Additional 
 
 After a few minutes post startup, you access https://localhost to see an available menu of services
 
-## n8n Configuration
+## HowTos and Helpers
 
 To be completed

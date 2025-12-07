@@ -15,7 +15,7 @@ services:
     user: haproxy
     restart: unless-stopped
     volumes:
-      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+      - ./_configs/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
       - ./_configs/ssl.pem:/usr/local/etc/haproxy/ssl.pem
       - ./_configs/container_hosts:/etc/hosts
     networks:
@@ -24,7 +24,6 @@ services:
     ports:
       - "80:80" # HTTP
       - "443:443" # HTTPS
-      - "8443:8443" # HTTPS (external)
       - "1024:1024" # Stats page
 
   # Basic web page
