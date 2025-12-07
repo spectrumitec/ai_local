@@ -4,6 +4,8 @@ This project is focused toward a use for proof of concept (POC), testing and a s
 
 ## What You Need To Start
 
+You will need internet access from the laptop or PC that will be running these tools and you will need proper administrator access.
+
 Assuming you are using a local PC or laptop that already has a GPU card installed (NVIDIA or AMD), these are a few tool installs needed to begin.
 
 Docker Components for container deployment needed for this project:
@@ -27,19 +29,22 @@ Docker Components for container deployment needed for this project:
 
 You can also use cloud based AI tools like OpenAI, etc. Cloud hosted is subject to costs as per services.
 
-## Help With Initial AI Tools Installation Locally
+## Help With Initial Tools Installation Locally
 
 If you need some help to install and configure, you can use the '\_HowTos' folder above with helpers on how to install and configure.
 
 <a href="https://github.com/spectrumitec/ai_local/blob/main/_HotTos/1_LM_Studio.md" target="_blank">LM Studio Install and Configure</a>
+<a href="https://github.com/spectrumitec/ai_local/blob/main/_HotTos/2_Docker_Desktop_Setup.md" target="_blank">Docker Desktop Installation and pull repository</a>
 
 ## Basic Install and Setup of this Repository
 
 LM Studio or Ollama (or cloud AI services) are not yet needed at this stage of setup. It wll only be needed once using some of the applications in this repository, like 'n8n', which has AI agent nodes and functions that need to leverage AI software.
 
-1. After installing Docker Desktop or Docker create a new folder for housng this repository files
+1. After installing Docker Desktop or Docker, create a new folder on your local system drive for housng these repository files.
 
-2. There are two way to pull down the Git repository. Either use a 'git' tool to clone the repository to a folder or download the zip file and extract it to a folder. Start by creating a folder you want to use for this project.
+2. There are two way to pull down the Git repository. Either use a 'git' tool to clone the repository to a folder or download the zip file and extract it to a folder.
+
+Github code menu:
 
 <img src="_HotTos/_images/readme-01-github.png">
 
@@ -62,7 +67,21 @@ The following folder structure is pulled from the repository or extracted from t
     └ hosts                 Required to add to your laptop or desktop hosts file (URL resolution to local names)
 </pre>
 
-3. Run the docker compose from the command line to deploy this repository. You will see the application containers pull and install. The containers will be managable from the Docker Desktop application.
+3. Before deploying, you may want to change the default root or admin credentials in the '.env' file. These are applied to database server, database admin panels and Milvus S3 bucket, etc. Some admin panels are not configured with login credentials like Milvus and Redis.
+
+Defaults are:
+
+<pre>
+DEFAULT_USERNAME=root
+DEFAULT_PASSWORD=P@ssw0rd
+</pre>
+
+Usernames will apply as the following:
+
+- root
+- root@local (pgadmin only)
+
+4. Run the docker compose from the command line to deploy the applications.
 
 Open a terminal, navigate to the folder where the repository is located and run the following command.
 
@@ -70,9 +89,14 @@ Open a terminal, navigate to the folder where the repository is located and run 
 docker compose -f ./docker-compose.yaml up -d
 </pre>
 
-If needed, see the Docker Desktop helpers for more details of this step: https://github.com/spectrumitec/ai_local/blob/main/_HotTos/2_Docker_Desktop_Setup.md
+4. When the application containers are deployed, a docker network will be configured with internal network of 172.18.0.0/24. Each container will have it's own IP address in this docker network. Some of the containers have web services and connections to them will be handled via and HAproxy container using ACL rules. By default the ACLs are configured to only local naming (below). The HAproxy configuration can be modified as you need to resolve other naming if choosing to use DNS resolution. For basic setup, we will use localhost and hosts naming which doesn't depend on DNS services.
 
-4. Your local system running these containers will need to have the following hosts file entries added.
+Your local system will need the following default hosts entries added to the hosts file.
+
+- Windows: c:\windows\system32\drivers\etc\hosts
+- Linux: /etc/hosts
+
+Hosts file additions (local naming):
 
 <pre>
 # Add to hosts file
@@ -85,17 +109,51 @@ If needed, see the Docker Desktop helpers for more details of this step: https:/
 127.0.0.1   n8n.local		        # Workflow application
 </pre>
 
-To startup, run command from the command line:
+## Additional Information
+
+HAproxy config file is located at '\_configs/haproxy.cfg'.
+
+SSL certificates are located in the '\_configs' folder. You may change with a trusted certificate.
+
+- ssl.crt (certificate file)
+- ssl.key (private key)
+- ssl.pem (cert + key) for HAproxy rules
+
+The following is the docker network host entries. File '\_configs/container_hosts' are mapped to each container for local docker network resolution:
 
 <pre>
-docker compose -f ./docker-compose.yaml up -d
-</pre>
+# Container localhost
+127.0.0.1        localhost
 
-From docker desktop, you should see the running containers start up. Additional folders will be created for the containers.
+# Proxy host
+172.18.0.2       haproxy
+
+# Admin panels
+172.18.0.10       redisinsight
+172.18.0.11       adminer
+172.18.0.12       pgadmin
+172.18.0.13       phpmyadmin
+172.18.0.14       attu
+
+# Workflow
+172.18.0.20       n8n
+
+# Databases
+172.18.0.30       redis
+172.18.0.31       mariadb
+172.18.0.32       postgres
+
+# Vector Store
+172.18.0.40       etcd
+172.18.0.41       minio
+172.18.0.42       milvus
+</pre>
 
 ## Start page
 
-After a few minutes post startup, you access https://localhost to see an available menu of services
+After a few minutes post startup, you can access https://localhost to see an available menu of web services.
+
+<img src="./_HotTos/_images/docker_8_localhost.png" />
 
 ## HowTos and Helpers
 

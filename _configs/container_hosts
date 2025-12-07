@@ -1,25 +1,25 @@
-# Dockernet hosts entry
-127.0.0.1	    localhost
-172.18.0.2	    haproxy
+# Container localhost
+127.0.0.1        localhost
+
+# Proxy host
+172.18.0.2       haproxy
 
 # Admin panels
-172.18.0.10	    redisinsight
-172.18.0.11	    adminer
-172.18.0.12	    pgadmin
-172.18.0.13	    phpmyadmin
-172.18.0.14	    attu
+172.18.0.10       redisinsight
+172.18.0.11       adminer
+172.18.0.12       pgadmin
+172.18.0.13       phpmyadmin
+172.18.0.14       attu
 
 # Workflow
-172.18.0.20	    n8n
+172.18.0.20       n8n
 
 # Databases
-172.18.0.30	    redis
-172.18.0.31	    mariadb
-172.18.0.32	    postgres
+172.18.0.30       redis
+172.18.0.31       mariadb
+172.18.0.32       postgres
 
 # Vector Store
-172.18.0.40	    etcd
-172.18.0.41	    minio
-172.18.0.42	    milvus
-
-
+172.18.0.40       etcd
+172.18.0.41       minio
+172.18.0.42       milvus
