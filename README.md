@@ -218,6 +218,9 @@ NOTE: Specifically to n8n, the path 'n8n-workflow' is a local system folder you 
 
 For MariaDB and Postgres, the database default ports are exposed to allow for local database management tools if not preferred to use the web based administration tools.
 
+- MariaDB (port 3306)
+- Postgres (port 5432)
+
 ## Start page
 
 After a few minutes post startup, you can access https://localhost to see an available menu of web services.
