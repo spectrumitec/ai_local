@@ -16,7 +16,7 @@ Application list
 - HAproxy (web services proxy)
 - Ubuntu (Basic web dashboard - landing page)
 - n8n Workflow and AI Automation
-- Redis (AI Chat memory use case)
+- Redis (AI Chat memory use case, keystore)
 - Redis Insight (Redis store viewer)
 - Postgres (general database storage)
 - Postgres pgAdmin (Postgres admin)
@@ -24,7 +24,7 @@ Application list
 - MariaDB phpMyAdmin (MariaDB admin)
 - Adminer (General all purpose Database management tool)
 - Milvus (Vector Database)
-- Milvus etcd service
+- Milvus etcd service (keystore specific to Milvus)
 - Milvus MinIO service (S3 bucket)
 - Milvus attu (Admin panel)
 
