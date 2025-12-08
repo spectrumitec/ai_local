@@ -9,6 +9,23 @@ This project is focused toward a use for proof of concept (POC), testing and a s
 - Security not built to maximum settings, do not store sensitive data
 - No warrently or support
 
+## Containers Deployed in this Project
+
+- HAproxy (web services proxy)
+- Ubuntu (Basic web dashboard - landing page)
+- n8n Workflow and AI Automation
+- Redis
+- Redis Insight
+- Postgres
+- Postgres pgAdmin (Postgres admin)
+- MariaDB
+- MariaDB phpMyAdmin (MariaDB admin)
+- Adminer (General all purpose Database management tool)
+- Milvus (Vector Database)
+- Milvus etcd service
+- Milvus MinIO service (S3 bucket)
+- Milvus attu (Admin panel)
+
 ## What You Need To Start
 
 You will need internet access from the laptop or PC that will be running these tools and you will need proper administrator access.
