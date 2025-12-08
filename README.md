@@ -11,20 +11,24 @@ This project is focused toward a use for proof of concept (POC), testing and a s
 
 ## Containers Deployed in this Project
 
+Application list
+
 - HAproxy (web services proxy)
 - Ubuntu (Basic web dashboard - landing page)
 - n8n Workflow and AI Automation
-- Redis
+- Redis (AI Chat memory use case)
 - Redis Insight (Redis store viewer)
-- Postgres
+- Postgres (general database storage)
 - Postgres pgAdmin (Postgres admin)
-- MariaDB
+- MariaDB (general database storage)
 - MariaDB phpMyAdmin (MariaDB admin)
 - Adminer (General all purpose Database management tool)
 - Milvus (Vector Database)
 - Milvus etcd service
 - Milvus MinIO service (S3 bucket)
 - Milvus attu (Admin panel)
+
+NOTE: Postgres and MariaDB are included depending on user preference.
 
 ## What You Need To Start
 
