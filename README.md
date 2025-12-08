@@ -202,3 +202,5 @@ After a few minutes post startup, you can access https://localhost to see an ava
 ## HowTos and Helpers
 
 See '\_HowTos' folder
+
+https://github.com/spectrumitec/ai_local/tree/main/_HotTos
