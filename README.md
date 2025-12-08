@@ -214,6 +214,10 @@ Application folders for persistant data storage are created on docker compose
 
 NOTE: Specifically to n8n, the path 'n8n-workflow' is a local system folder you can place documents and files for specific purposes in n8n workflows. Example may be if creating file output from n8n, ingesting PDF or other documents for RAG, or other use cases.
 
+## Direct Database Access
+
+For MariaDB and Postgres, the database default ports are exposed to allow for local database management tools if not preferred to use the web based administration tools.
+
 ## Start page
 
 After a few minutes post startup, you can access https://localhost to see an available menu of web services.
