@@ -15,7 +15,7 @@ This project is focused toward a use for proof of concept (POC), testing and a s
 - Ubuntu (Basic web dashboard - landing page)
 - n8n Workflow and AI Automation
 - Redis
-- Redis Insight
+- Redis Insight (Redis store viewer)
 - Postgres
 - Postgres pgAdmin (Postgres admin)
 - MariaDB
