@@ -120,7 +120,7 @@ services:
 
   n8n:
     image: n8nio/n8n:1.123.3
-    container_name: Workflow-n8n
+    container_name: n8n-workflow
     restart: unless-stopped
     volumes:
       - ./application/n8n:/home/node/.n8n
