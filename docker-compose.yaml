@@ -124,6 +124,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./application/n8n:/home/node/.n8n
+      - ./n8n-workflow:/workflow
       - ./_configs/ssl.crt:/home/node/ssl.crt
       - ./_configs/ssl.key:/home/node/ssl.key
       - ./_configs/ssl.key:/home/node/ssl.key

@@ -1,3 +1,3 @@
 # HowTos and Helpers
 
-See numbered documents above for more details.
+See above documents details.

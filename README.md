@@ -2,6 +2,13 @@
 
 This project is focused toward a use for proof of concept (POC), testing and a starting point for learning AI and tools with AI model software. This project lends fairly well to portable installations on laptop or desktop PC. This is not meant for production workloads.
 
+## Limitations
+
+- n8n is not able to interface with Google drive or other services in this type of configuration (OAuth limitations)
+- Not production usable
+- Security not built to maximum settings, do not store sensitive data
+- No warrently or support
+
 ## What You Need To Start
 
 You will need internet access from the laptop or PC that will be running these tools and you will need proper administrator access.
@@ -162,6 +169,29 @@ The following is the docker network host entries. File '\_configs/container_host
 172.18.0.41       minio
 172.18.0.42       milvus
 </pre>
+
+Application folders for persistant data storage are created on docker compose
+
+<pre>
+  new_folder
+    ├ _HowTos               How To doc helpers and samples
+    ├ _configs              Holds confiuration files, SSL certificates, and some container scripts
+    ├ .env                  Default variables for compose file (default user and passwords)
+    ├ .gitignore            Ignore file for excluding folders when pushed to a git repo
+    ├ application           App persistent storage
+    │   ├ adminer           Adminer DB admin
+    │   ├ mariadb           MariaDB DB storage and phpMyAdmin
+    │   ├ milvus            Milvus DB, S3 bucket, etcd, admin
+    │   ├ n8n               n8n application data
+    │   ├ postgres          postgres DB storage and pgAdmin
+    │   └ redis             redis DB storage and pgAdmin
+    ├ n8n-workflow          n8n container mount (/workflow)
+    ├ README.md             This file
+    ├ docker-compose.yml    Docker compose file (application startup)
+    └ hosts                 Hosts entries for local PC or Laptop
+</pre>
+
+NOTE: Specifically to n8n, the path 'n8n-workflow' is a local system folder you can place documents and files for specific purposes in n8n workflows. Example may be if creating file output from n8n, ingesting PDF or other documents for RAG, or other use cases.
 
 ## Start page
 
