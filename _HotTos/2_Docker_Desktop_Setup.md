@@ -10,21 +10,21 @@ Download and install Docker (https://www.docker.com/get-started/)
 
 <img src="_images/docker_2_setup.png" alt="" />
 
-Launch the docker application and login
+## Launch the Docker Desktop Application and Login
 
 <img src="_images/docker_3_launch.png" alt="" />
 
 <img src="_images/docker_4_launch.png" alt="" />
 
-Initial deployment:
+## Initial Deployment
+
+Reference to README on root page:
 
 - Create a folder
 - Open a console
 - Navigate to folder
 - Git pull repository
 - Run the deployment command
-
-Reference README:
 
 <pre>
 git clone https://github.com/spectrumitec/ai_local.git .
@@ -38,6 +38,8 @@ docker compose -f ./docker-compose.yaml up -d
 <img src="_images/docker_6_deploy.png" alt="" />
 
 <img src="_images/docker_7_deploy.png" alt="" />
+
+## Localhost and Dashboard
 
 Open 'http://localhost' to see initial dashboard
 
