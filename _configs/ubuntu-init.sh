@@ -46,9 +46,9 @@ cat > /www/index.html << EOF
     <h2>Admin Services</h2>
     <ul>
         <li><a href="https://insight.local" target="_blank">REDIS Insight</a></li>
-        <li><a href="https://adminer.local" target="_blank">Basic MySQL, Postgres admin</a></li>
         <li><a href="https://pgadmin.local" target="_blank">Postgres pgAdmin</a></li>
         <li><a href="https://phpmyadmin.local" target="_blank">MariaDB phpMyAdmin</a></li>
+        <li><a href="https://adminer.local" target="_blank">Adminer (alternate DB Admin)</a></li>
         <li><a href="https://attu.local" target="_blank">Milvus Admin</a></li>
         <li><a href="https://minio.local" target="_blank">Milvus S3 Bucket Admin</a></li>
     </ul>
