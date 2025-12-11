@@ -50,8 +50,10 @@ Docker Components for container deployment needed for this project:
 
 (Optional) AI software tools (Local AI models):
 
+- Docker Model Runner (included in Docker Desktop)
 - LM Studio for AI models: https://lmstudio.ai/download
 - Ollama for AI models: https://www.ollama.com/download
+- vLLM for high speed minimum container: https://github.com/vllm-project/vllm
 
 <b>NOTE</b>: It is also possible to have LM Studio or Ollama installed on different systems as long as you can reach them over the network. This might work well if you have access to one or more systems with GPUs installed that you may want to take advantage of or test different AI model software.
 
@@ -143,9 +145,9 @@ Hosts file additions (local naming):
 127.0.0.1   adminer.local       # Common Web Admin for MySQL, MariaDB, Postgres, etc
 127.0.0.1   pgadmin.local       # PGAdmin local
 127.0.0.1   phpmyadmin.local    # PHPMyAdmin
-127.0.0.1   attu.local		      # Milvus Admin
-127.0.0.1   minio.local		      # MinIO S3 bucket admin
-127.0.0.1   n8n.local		        # Workflow application
+127.0.0.1   attu.local          # Milvus Admin
+127.0.0.1   minio.local         # MinIO S3 bucket admin
+127.0.0.1   n8n.local           # Workflow application
 </pre>
 
 </td></tr>
