@@ -63,7 +63,7 @@ You can also use cloud based AI tools like OpenAI, etc. Cloud hosted is subject 
 
 If you need some help to install and configure, you can use the '\_HowTos' folder above with helpers on how to install and configure.
 
-<a href="https://github.com/spectrumitec/ai_local/blob/main/_HotTos/1_LM_Studio.md" target="_blank">LM Studio Install and Configure</a>
+<a href="https://github.com/spectrumitec/ai_local/blob/main/_HotTos/1_LM_Studio.md" target="_blank">LM Studio Install and Configure</a><br />
 <a href="https://github.com/spectrumitec/ai_local/blob/main/_HotTos/2_Docker_Desktop_Setup.md" target="_blank">Docker Desktop Installation and pull repository</a>
 
 ## Basic Install and Setup of this Repository
