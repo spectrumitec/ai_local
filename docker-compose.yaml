@@ -32,7 +32,6 @@ services:
     container_name: ubunutu-localhost
     restart: unless-stopped
     volumes:
-      - ./application/redis/insight:/data
       - ./_configs/ubuntu-init.sh:/init.sh
     networks:
       dockernet:

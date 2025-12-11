@@ -1,13 +1,17 @@
 #!/bin/bash
 
 # Install python3
-echo "Update and install python"
+echo ""
+echo "Container Startup"
+echo " > Update and install python"
 apt update > /dev/null 2>&1
 apt install -y python3 > /dev/null 2>&1
 
 # Create HTML file
-echo "Create HTML launch pad file"
-mkdir /www
+if [ ! -d "/www" ] ; then
+    mkdir /www
+fi
+echo " > Create or update HTML launch pad file"
 cat > /www/index.html << EOF
 <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +93,44 @@ cat > /www/index.html << EOF
 </html>
 EOF
 
+# Post client
+if [ ! -f "/tmp/pgclient" ]; then
+    echo " > install Postgres DB client"
+    apt install -y \
+        sudo \
+        dirmngr \
+        ca-certificates \
+        software-properties-common \
+        apt-transport-https \
+        lsb-release \
+        curl > /dev/null 2>&1
+    curl -fSsL https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | sudo tee /usr/share/keyrings/postgresql.gpg > /dev/null
+    echo deb [arch=amd64,arm64,ppc64el signed-by=/usr/share/keyrings/postgresql.gpg] http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main | sudo tee /etc/apt/sources.list.d/postgresql.list
+    apt update > /dev/null 2>&1
+    apt install -y postgresql-client-15 > /dev/null 2>&1
+    psql --version
+    touch /tmp/pgclient
+else
+    echo " > Postgres DB client already installed"
+    psql --version
+fi
+
+# MariaDB client
+if [ ! -f "/tmp/mdbclient" ]; then
+    echo " > install MariaDB client"
+    curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version=11.8 > /dev/null
+    apt update > /dev/null 2>&1
+    apt install -y mariadb-client > /dev/null 2>&1
+    mariadb --version
+    touch /tmp/mdbclient
+else
+    echo " > MariaDB client already installed"
+    mariadb --version
+fi
+
 # Start web service
-echo "Start python web services"
+echo ""
+echo "Start python web services -- https://localhost/"
+echo "═══════════════════════════════════"
 cd /www
 python3 -m http.server 80
